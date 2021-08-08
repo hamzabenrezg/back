@@ -7,7 +7,8 @@ node {
     sh "mvn -v"
     sh "java -version"
 
-   
+    stage 'test'
+    sh "mvn test"
 
     stage 'package'
     sh "mvn package"
