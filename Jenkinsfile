@@ -10,8 +10,7 @@ node {
     stage 'build'
     sh "mvn clean install -DskipTests"
 
-    stage 'package'
-    sh "mvn package"
+   
 
     stage 'report'
     step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
