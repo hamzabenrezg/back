@@ -7,8 +7,8 @@ node {
     sh "mvn -v"
     sh "java -version"
 
-    stage 'test'
-    sh "mvn test"
+    stage 'build'
+    sh "mvn clean install -DskipTests"
 
     stage 'package'
     sh "mvn package"
